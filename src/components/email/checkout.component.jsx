@@ -24,49 +24,6 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
-  appBar: {
-    position: 'relative',
-  },
-  layout: {
-    width: 'auto',
-    height: '80%',
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
-      width: 600,
-      marginLeft: 'auto',
-      marginRight: 'auto',
-    },
-  },
-  paper: {
-    height: 600,
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(3),
-    padding: theme.spacing(2),
-    [theme.breakpoints.up(600 + theme.spacing(3) * 2)]: {
-      marginTop: theme.spacing(6),
-      marginBottom: theme.spacing(6),
-      padding: theme.spacing(3),
-    },
-  },
-  stepper: {
-    padding: theme.spacing(3, 0, 5),
-  },
-  content: {
-    height: '70%',
-    overflow: 'scroll',
-  },
-  buttons: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-  },
-  button: {
-    marginTop: theme.spacing(3),
-    marginLeft: theme.spacing(1),
-  },
-}));
-
 const steps = ['Personal Information', 'Comments', 'Review'];
 
 export default function Checkout({ handleClose }) {
@@ -81,6 +38,53 @@ export default function Checkout({ handleClose }) {
     country: '',
     content: '',
   });
+  const useStyles = makeStyles((theme) => ({
+    appBar: {
+      position: 'relative',
+    },
+    layout: {
+      width: 'auto',
+      height: '80%',
+      marginLeft: theme.spacing(2),
+      marginRight: theme.spacing(2),
+      [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
+        width: 600,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+      },
+    },
+    paper: {
+      height: '80%',
+      marginTop: theme.spacing(3),
+      marginBottom: theme.spacing(3),
+      padding: theme.spacing(2),
+      [theme.breakpoints.up(600 + theme.spacing(3) * 2)]: {
+        marginTop: theme.spacing(6),
+        marginBottom: theme.spacing(6),
+        padding: theme.spacing(3),
+      },
+    },
+    stepper: {
+      padding: theme.spacing(3, 0, 5),
+    },
+    content: {
+      height: 'calc(100% - 200px)',
+      overflow: 'scroll',
+    },
+    buttons: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+    },
+    buttonLeft: {
+      marginTop: theme.spacing(3),
+      marginLeft: theme.spacing(1),
+      marginRight: 'auto',
+    },
+    button: {
+      marginTop: theme.spacing(3),
+      marginLeft: theme.spacing(1),
+    },
+  }));
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -126,6 +130,9 @@ export default function Checkout({ handleClose }) {
                 {getStepContent(activeStep, info, setInfo)}
               </div>
               <div className={classes.buttons}>
+                <Button onClick={handleClose} className={classes.buttonLeft}>
+                  Cancel
+                </Button>
                 {activeStep !== 0 && (
                   <Button onClick={handleBack} className={classes.button}>
                     Back

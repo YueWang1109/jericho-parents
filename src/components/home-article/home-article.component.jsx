@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Modal from '@material-ui/core/Modal';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Poster from '../poster/poster.component';
 import Email from '../email/checkout.component';
 
 import './home-article.styles.scss';
 const HomeArticle = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const matches = useMediaQuery('(max-width:800px)');
   const handleClick = () => {
     setIsOpen(true);
   };
@@ -13,7 +15,7 @@ const HomeArticle = () => {
     setIsOpen(false);
   };
   return (
-    <div className="home-article">
+    <div className={matches ? 'home-article small' : 'home-article'}>
       <Modal
         open={isOpen}
         onClose={handleClose}
