@@ -12,6 +12,9 @@
     .title {
       padding-bottom: 0;
     }
+    &.small {
+      height: 200px;
+    }
   }
   .title {
     padding-bottom: 10px;
@@ -19,5 +22,8 @@
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     color: rgb(255, 255, 255);
+    &.small {
+      font-size: 30px;
+    }
   }
 }
