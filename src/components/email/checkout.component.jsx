@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   layout: {
     width: 'auto',
-    height: 600,
+    height: '80%',
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
     [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
@@ -54,7 +54,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3, 0, 5),
   },
   content: {
-    height: 400,
+    height: '70%',
+    overflow: 'scroll',
   },
   buttons: {
     display: 'flex',

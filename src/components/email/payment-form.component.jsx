@@ -6,7 +6,7 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 const useStyles = makeStyles((theme) => ({
   textArea: {
-    width: '100%',
+    width: '95%',
   },
 }));
 
@@ -22,7 +22,7 @@ export default function PaymentForm({ info, setInfo }) {
       <Typography variant="h6" gutterBottom>
         Comments (required)
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container>
         <Grid item xs={12}>
           <TextareaAutosize
             rowsMin={20}
