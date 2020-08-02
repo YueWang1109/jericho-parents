@@ -8,7 +8,7 @@ const Index = () => (
     <div className="title-container">
       <div className="title">Jericho Parents</div>
       <div className="sub-title">We are all together! Jericho Strong!</div>
-      <Link to="/main" className="custom-link">
+      <Link to="/home" className="custom-link">
         Click in
       </Link>
     </div>
