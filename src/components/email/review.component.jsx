@@ -28,6 +28,12 @@ export default function Review({ info }) {
     country,
     content,
   } = info;
+  const fullAddr =
+    (address1 && address1 + ', ') +
+    (address2 && address2 + ', ') +
+    (city && city + ', ') +
+    (state && state + ', ') +
+    zip;
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -70,14 +76,14 @@ export default function Review({ info }) {
           alignContent="flex-start"
           className={classes.item}
         >
-          {`${address1}, ${address2}, ${city}, ${zip}, ${country}`}
+          {fullAddr}
         </Grid>
 
         <Grid item xs={12} alignContent="flex-start" className={classes.title}>
           Message:
         </Grid>
         <Grid item xs={12} alignContent="flex-start" className={classes.item}>
-          {content}
+          {content.length > 800 ? content.slice(0, 800) + '...' : content}
         </Grid>
       </Grid>
     </React.Fragment>

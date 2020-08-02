@@ -1,8 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Paper from '@material-ui/core/Paper';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -33,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   layout: {
     width: 'auto',
+    height: 600,
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
     [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
@@ -42,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   paper: {
+    height: 600,
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
     padding: theme.spacing(2),
@@ -54,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
   stepper: {
     padding: theme.spacing(3, 0, 5),
   },
+  content: {
+    height: 400,
+  },
   buttons: {
     display: 'flex',
     justifyContent: 'flex-end',
@@ -64,22 +66,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const steps = ['Personal Information', 'Comments', 'Review your message'];
+const steps = ['Personal Information', 'Comments', 'Review'];
 
-function getStepContent(step, info, setInfo) {
-  switch (step) {
-    case 0:
-      return <AddressForm info={info} setInfo={setInfo} />;
-    case 1:
-      return <PaymentForm info={info} setInfo={setInfo} />;
-    case 2:
-      return <Review info={info} setInfo={setInfo} />;
-    default:
-      throw new Error('Unknown step');
-  }
-}
-
-export default function Checkout() {
+export default function Checkout({ handleClose }) {
   const [info, setInfo] = React.useState({
     firstName: '',
     lastName: '',
@@ -102,17 +91,22 @@ export default function Checkout() {
   const handleBack = () => {
     setActiveStep(activeStep - 1);
   };
-
+  const getStepContent = (step, info, setInfo) => {
+    switch (step) {
+      case 0:
+        return <AddressForm info={info} setInfo={setInfo} />;
+      case 1:
+        return <PaymentForm info={info} setInfo={setInfo} />;
+      case 2:
+        return <Review info={info} setInfo={setInfo} />;
+      default:
+        console.log(info);
+        setTimeout(handleClose, 1000);
+        return <div>Uploading...</div>;
+    }
+  };
   return (
     <React.Fragment>
-      <CssBaseline />
-      <AppBar position="absolute" color="default" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Jericho Parents
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <main className={classes.layout}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
@@ -126,37 +120,26 @@ export default function Checkout() {
             ))}
           </Stepper>
           <React.Fragment>
-            {activeStep === steps.length ? (
-              <React.Fragment>
-                <Typography variant="h5" gutterBottom>
-                  Thank you for your order.
-                </Typography>
-                <Typography variant="subtitle1">
-                  Your order number is #2001539. We have emailed your order
-                  confirmation, and will send you an update when your order has
-                  shipped.
-                </Typography>
-              </React.Fragment>
-            ) : (
-              <React.Fragment>
+            <React.Fragment>
+              <div className={classes.content}>
                 {getStepContent(activeStep, info, setInfo)}
-                <div className={classes.buttons}>
-                  {activeStep !== 0 && (
-                    <Button onClick={handleBack} className={classes.button}>
-                      Back
-                    </Button>
-                  )}
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleNext}
-                    className={classes.button}
-                  >
-                    {activeStep === steps.length - 1 ? 'Submit' : 'Next'}
+              </div>
+              <div className={classes.buttons}>
+                {activeStep !== 0 && (
+                  <Button onClick={handleBack} className={classes.button}>
+                    Back
                   </Button>
-                </div>
-              </React.Fragment>
-            )}
+                )}
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleNext}
+                  className={classes.button}
+                >
+                  {activeStep === steps.length - 1 ? 'Submit' : 'Next'}
+                </Button>
+              </div>
+            </React.Fragment>
           </React.Fragment>
         </Paper>
         <Copyright />

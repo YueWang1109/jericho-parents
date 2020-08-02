@@ -25,8 +25,8 @@ export default function PaymentForm({ info, setInfo }) {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <TextareaAutosize
-            rowsMin={16}
-            rowsMax={16}
+            rowsMin={20}
+            rowsMax={20}
             placeholder="leave your comment here"
             className={classes.textArea}
             value={info.content}

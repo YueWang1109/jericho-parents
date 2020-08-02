@@ -1,0 +1,21 @@
+.home-article {
+  .contact-btn {
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    color: red;
+    font-weight: 700;
+    border: 3px solid red;
+    border-radius: 30px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: red;
+      color: white;
+    }
+  }
+  p {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+}

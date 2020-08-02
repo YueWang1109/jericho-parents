@@ -97,7 +97,7 @@ export default function AddressForm({ info, setInfo }) {
             onChange={handleChange}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        {/* <Grid item xs={12} sm={6}>
           <TextField
             required
             id="country"
@@ -108,7 +108,7 @@ export default function AddressForm({ info, setInfo }) {
             value={info.country}
             onChange={handleChange}
           />
-        </Grid>
+        </Grid> */}
       </Grid>
     </React.Fragment>
   );
