@@ -7,12 +7,20 @@
 
   &.small {
     font-size: 14px;
+
+    p .big {
+      font-size: 25px;
+    }
   }
   .img {
     width: 100%;
   }
-  p span {
+  p .red {
     font-weight: 700;
     color: red;
+  }
+  p .big {
+    font-weight: 700;
+    font-size: 35px;
   }
 }

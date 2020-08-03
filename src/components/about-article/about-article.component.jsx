@@ -29,17 +29,19 @@ const AboutArticle = () => {
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
-        <Poster />
+        <div>
+          <Poster />
+        </div>
       </Modal>
       <img src={Map} alt="map" className="img" />
       <div>
         <p>
-          The Hampton Inn, located at 120 Jericho Turnpike, has recently been
-          sold to a private investor with plans to convert it into a homeless
-          shelter. Local residents initially heard about this at the Jericho
-          Broad of Education meeting on July 23rd, 2020. Renovation of the
-          former hotel has already been undertaken, with the homeless shelter
-          targeting to begin operations in August 2020.
+          The <span className="big">Hampton Inn</span>, located at 120 Jericho
+          Turnpike, has recently been sold to a private investor with plans to
+          convert it into a homeless shelter. Local residents initially heard
+          about this at the Jericho Broad of Education meeting on July 23rd,
+          2020. Renovation of the former hotel has already been undertaken, with
+          the homeless shelter targeting to begin operations in August 2020.
         </p>
         <p>
           This plan has NEVER been communicated to the local community. Since
@@ -65,9 +67,9 @@ const AboutArticle = () => {
           </li>
         </ul>
         <p>
-          It is <span>UNACCPTABLE</span> that there was no communication and no
-          transparency regarding the conversion of the Hampton Inn into a
-          homeless shelter.
+          It is <span className="red">UNACCPTABLE</span> that there was no
+          communication and no transparency regarding the conversion of the
+          Hampton Inn into a homeless shelter.
         </p>
       </div>
     </div>
