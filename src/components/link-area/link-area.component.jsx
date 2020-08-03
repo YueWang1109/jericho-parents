@@ -12,7 +12,7 @@ const LinkArea = () => (
   <Grid container className="link-area">
     <Grid container justify="center" alignItems="center" direction="column">
       <div>
-        1. <span>Petition</span> (“Stop the Housing Site for Homeless Shleter in
+        1. <span>Petition</span> (“Stop the Housing Site for Homeless Shelter in
         Jericho”){' '}
         <a
           href="http://chng.it/KGNFGb5YNd"
@@ -29,7 +29,7 @@ const LinkArea = () => (
     </Grid>
     <Grid container justify="center" alignItems="center" direction="column">
       <div>
-        2. <span>GoFundMe</span> (“Stop the Homless Shleter in Jerihco”){' '}
+        2. <span>GoFundMe</span> (“Stop the Homless Shelter in Jerihco”){' '}
         <a
           href="https://gf.me/u/yjzhvw"
           rel="noopener noreferrer"
