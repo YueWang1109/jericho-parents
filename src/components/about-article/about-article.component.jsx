@@ -67,7 +67,7 @@ const AboutArticle = () => {
           </li>
         </ul>
         <p>
-          It is <span className="red">UNACCPTABLE</span> that there was no
+          It is <span className="red">UNACCEPTABLE</span> that there was no
           communication and no transparency regarding the conversion of the
           Hampton Inn into a homeless shelter.
         </p>
