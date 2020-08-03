@@ -29,7 +29,7 @@ const LinkArea = () => (
     </Grid>
     <Grid container justify="center" alignItems="center" direction="column">
       <div>
-        2. <span>GoFundMe</span> (“Stop the Homless Shelter in Jerihco”){' '}
+        2. <span>GoFundMe</span> (“Stop the Homeless Shelter in Jerihco”){' '}
         <a
           href="https://gf.me/u/yjzhvw"
           rel="noopener noreferrer"
