@@ -1,13 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Modal from '@material-ui/core/Modal';
 import Map from '../../assets/about.png';
+import Poster from '../poster/poster.component';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import './about-article.styles.scss';
 
 const AboutArticle = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    const date = new Date();
+    const ts = date.getTime();
+    const last_ts = localStorage.getItem('ts');
+    console.log('last_ts', last_ts);
+    if (!last_ts || ts - last_ts > 1000 * 60 * 60 * 24) {
+      setIsOpen(true);
+      localStorage.setItem('ts', ts);
+    }
+    console.log(isOpen);
+    setTimeout(() => setIsOpen(false), 5000);
+  }, []);
   const matches = useMediaQuery('(max-width:800px)');
+
   return (
     <div className={matches ? 'about-article small' : 'about-article'}>
+      <Modal
+        open={isOpen}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+      >
+        <Poster />
+      </Modal>
       <img src={Map} alt="map" className="img" />
       <div>
         <p>
@@ -16,12 +39,12 @@ const AboutArticle = () => {
           shelter. Local residents initially heard about this at the Jericho
           Broad of Education meeting on July 23rd, 2020. Renovation of the
           former hotel has already been undertaken, with the homeless shelter
-          targeting to begin operations August 2020.{' '}
+          targeting to begin operations in August 2020.
         </p>
         <p>
           This plan has NEVER been communicated to the local community. Since
           July 23rd, local residents have been reaching out to County elected
-          officials to obtain more facts.{' '}
+          officials to obtain more facts.
         </p>
         <ul>
           <li>
@@ -44,8 +67,7 @@ const AboutArticle = () => {
         <p>
           It is <span>UNACCPTABLE</span> that there was no communication and no
           transparency regarding the conversion of the Hampton Inn into a
-          homeless shelter. This platform provides facts and updates. Please
-          join and follow us!{' '}
+          homeless shelter.
         </p>
       </div>
     </div>

@@ -9,16 +9,15 @@ const Header = () => {
   const { pathname } = useLocation();
   const matches = useMediaQuery('(max-width:800px)');
 
-  let classStr =
-    pathname.toLowerCase() === '/home' || pathname.toLowerCase() === '/home/'
-      ? 'header long'
-      : 'header';
-  classStr += matches ? ' small' : '';
   return (
     <>
-      <NavBar />
-      <div className={classStr}>
-        <div className={matches ? 'title small' : 'title'}>Jericho Parents</div>
+      {/* <NavBar /> */}
+      <div className={matches ? 'header small' : 'header'}>
+        <div className="cover-layer">
+          <div className={matches ? 'title small' : 'title'}>
+            Jericho {'        '}Parents
+          </div>
+        </div>
       </div>
     </>
   );

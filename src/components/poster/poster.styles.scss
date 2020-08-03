@@ -1,8 +1,16 @@
 .poster-container {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .poster {
-    width: 100%;
+    width: 50%;
+
+    &.full {
+      width: 95%;
+    }
   }
   .title {
     font-family: 'PT Sans', sans-serif;

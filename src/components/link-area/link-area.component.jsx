@@ -12,36 +12,42 @@ const LinkArea = () => (
   <Grid container className="link-area">
     <Grid container justify="center" alignItems="center" direction="column">
       <div>
-        1. A <span>petition</span> has been formed, click{' '}
+        1. <span>Petition</span> (“Stop the Housing Site for Homeless Shleter in
+        Jericho”){' '}
         <a
-          href="http://chng.it/2GyBX6sZpC"
+          href="http://chng.it/KGNFGb5YNd"
           rel="noopener noreferrer"
           target="_blank"
         >
-          here
-        </a>{' '}
-        or scan the below QR code.
+          http://chng.it/KGNFGb5YNd
+        </a>
+        <div className="detail">
+          Over 1,500 supporters have signed the petition within 22 hours.
+        </div>
       </div>
       <img src={petition} alt="Logo" />
     </Grid>
     <Grid container justify="center" alignItems="center" direction="column">
       <div>
-        2. <span>Donate</span> on GoFundMe, click{' '}
+        2. <span>GoFundMe</span> (“Stop the Homless Shleter in Jerihco”){' '}
         <a
-          href="https://www.gofundme.com/f/stop-the-homeless-shelter-in-jericho
-"
+          href="https://gf.me/u/yjzhvw"
           rel="noopener noreferrer"
           target="_blank"
         >
-          here
-        </a>{' '}
-        or scan the below QR code.
+          https://gf.me/u/yjzhvw
+        </a>
+        <div className="detail">
+          More than $75K has been raised within 24 hours. This money will be
+          strictly used for all legal services necessary to fight the homeless
+          shelter location on behalf of the community.
+        </div>
       </div>
       <img src={donation} alt="Logo" />
     </Grid>
     <Grid container justify="center" alignItems="center" direction="column">
       <div>
-        3. Join in <span>Skype</span> Discussion Group, click{' '}
+        3. <span>Jericho Strong on Skype</span>{' '}
         <a
           href="https://join.skype.com/sDK6CLjJg4GW
 
@@ -49,15 +55,17 @@ const LinkArea = () => (
           rel="noopener noreferrer"
           target="_blank"
         >
-          here
-        </a>{' '}
-        or scan the below QR code.
+          https://join.skype.com/sDK6CLjJg4GW
+        </a>
+        <div className="detail">
+          Approximately 130 participants has joined within 48 hours.
+        </div>
       </div>
       <img src={skype} alt="Logo" />
     </Grid>
     <Grid container justify="center" alignItems="center" direction="column">
       <div>
-        4.<span>Email</span>{' '}
+        4.{' '}
         <a
           href="mailto: 516Jericho@gmail.com
 
@@ -66,9 +74,11 @@ const LinkArea = () => (
           target="_blank"
         >
           516jericho@gmail.com
-        </a>{' '}
-        or scan the below QR code to join in mailing list for update and free
-        yard signs. (Send us your address to get signs delivered to you.)
+        </a>
+        <div className="detail">
+          An information inbox was created to collect emails and circulate needs
+          from the community.
+        </div>
       </div>
       <img src={sign} alt="Logo" />
     </Grid>
