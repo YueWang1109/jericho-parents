@@ -9,7 +9,9 @@ const Index = () => {
   return (
     <div className="index-page">
       <div className="title-container">
-        <div className={matches ? 'title small' : 'title'}>Jericho Parents</div>
+        <div className={matches ? 'title small' : 'title'}>
+          Concerned Jericho Parents
+        </div>
         <div className={matches ? 'sub-title small' : 'sub-title'}>
           We are all together! Jericho Strong!
         </div>
