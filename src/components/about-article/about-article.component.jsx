@@ -7,7 +7,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import './about-article.styles.scss';
 
 const AboutArticle = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   useEffect(() => {
     const date = new Date();
     const ts = date.getTime();
@@ -17,8 +17,8 @@ const AboutArticle = () => {
       setIsOpen(true);
       localStorage.setItem('ts', ts);
     }
-    console.log(isOpen);
-    setTimeout(() => setIsOpen(false), 5000);
+    // console.log(isOpen);
+    // setTimeout(() => setIsOpen(false), 5000);
   }, []);
   const matches = useMediaQuery('(max-width:800px)');
 

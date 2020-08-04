@@ -15,7 +15,7 @@ const Header = () => {
       <div className={matches ? 'header small' : 'header'}>
         <div className="cover-layer">
           <div className={matches ? 'title small' : 'title'}>
-            Jericho {'        '}Parents
+            Concerned Jericho Parents
           </div>
         </div>
       </div>

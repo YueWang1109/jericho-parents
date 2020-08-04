@@ -7,19 +7,23 @@ import './poster.styles.scss';
 const Poster = () => {
   const matches = useMediaQuery('(max-width:800px)');
   return (
-    <div>
-      <Grid container className="poster-container">
-        {poster && (
+    <div className="poster-container">
+      {poster && (
+        <>
           <img
             src={poster}
             alt="Logo"
             className={matches ? 'poster full' : 'poster'}
           />
-        )}
-        {/* <Grid item xs={12} className="title">
+          <div>
+            <div>Leave your Information to get more detail</div>
+            <div>Not Now</div>
+          </div>
+        </>
+      )}
+      {/* <Grid item xs={12} className="title">
         Let's STOP the illegal Homeless Shelter!!
       </Grid> */}
-      </Grid>
     </div>
   );
 };
