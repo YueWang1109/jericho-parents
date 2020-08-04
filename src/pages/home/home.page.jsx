@@ -59,6 +59,8 @@ const HomePage = () => {
           </div>
         </Grid>
         <Grid item xs={12} className={classes.footer}>
+          {/* <div>Follow us on:</div>
+          <div>facebook twitter instagram</div> */}
           <Copyright />
         </Grid>
       </Grid>

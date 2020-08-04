@@ -80,7 +80,7 @@ const LinkArea = () => (
           from the community.
         </div>
       </div>
-      <img src={sign} alt="Logo" />
+      <img src={info} alt="Logo" />
     </Grid>
   </Grid>
 );
