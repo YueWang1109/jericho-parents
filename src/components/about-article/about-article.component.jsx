@@ -58,9 +58,9 @@ const AboutArticle = () => {
           </p>
           <p>
             ⚠At the same time and of significant import, we have scheduled a
-            <span className="red mid">Press Conference and Rally</span> in front
-            of Jericho High School (in the circle) for tomorrow (
-            <span className="mid">at 11:00 a.m. Saturday, August 8, 2020</span>
+            <span className="red">Press Conference and Rally</span> in front of
+            Jericho High School (in the circle) for tomorrow (
+            <span className="red">at 11:00 a.m. Saturday, August 8, 2020</span>
             ). Town of Oyster Bay officials are aware, as is the media. We
             strongly believe that this press conference/rally will be covered
             extensively by the press, and as such, it is of great importance
