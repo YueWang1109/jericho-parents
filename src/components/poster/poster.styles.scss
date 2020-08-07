@@ -11,12 +11,19 @@
     padding: 10px 40px;
     font-size: 20px;
     background-color: white;
+
+    &.small {
+      margin: 10px;
+      padding: 3px 20px;
+      font-size: 16px;
+      background-color: white;
+    }
   }
   .poster {
     height: 80%;
 
-    &.full {
-      height: 80%;
+    &.small {
+      height: 70%;
     }
   }
   .title {

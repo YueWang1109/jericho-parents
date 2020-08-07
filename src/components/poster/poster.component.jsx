@@ -8,14 +8,17 @@ const Poster = ({ handleClose }) => {
   const matches = useMediaQuery('(max-width:800px)');
   return (
     <Grid container className="poster-container">
-      <button className="close-btn" onClick={handleClose}>
+      <button
+        className={matches ? 'close-btn small' : 'close-btn'}
+        onClick={handleClose}
+      >
         Close
       </button>
       {poster && (
         <img
           src={poster}
           alt="Logo"
-          className={matches ? 'poster full' : 'poster'}
+          className={matches ? 'poster small' : 'poster'}
         />
       )}
       {/* <Grid item xs={12} className="title">
