@@ -13,12 +13,22 @@
       font-size: 25px;
     }
   }
+  .urgen {
+    border: 1px red solid;
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.1);
+  }
   .img {
     width: 100%;
   }
   p .red {
     font-weight: 700;
     color: red;
+  }
+  p .mid {
+    font-weight: 700;
+    font-size: 25px;
+    padding: 0 5px;
   }
   p .big {
     font-weight: 700;

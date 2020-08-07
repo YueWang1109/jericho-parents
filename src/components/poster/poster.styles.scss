@@ -2,14 +2,21 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  .close-btn {
+    margin: 20px;
+    padding: 10px 40px;
+    font-size: 20px;
+    background-color: white;
+  }
   .poster {
-    width: 50%;
+    height: 80%;
 
     &.full {
-      width: 95%;
+      height: 80%;
     }
   }
   .title {
