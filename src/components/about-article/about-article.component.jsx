@@ -49,12 +49,7 @@ const AboutArticle = () => {
             To assist us in this fight, we retained one of Long Island’s
             pre-eminent law firms and, earlier today, retained a top notch
             Public Relations firm. We are in regular contact with Town of Oyster
-            Bay officials and were advised this morning that the Town filed suit
-            in Nassau Supreme Court against the developer seeking a Temporary
-            Restraining Order with regard to the shelter. We are awaiting a
-            hearing date/time and expect that once same is scheduled (likely to
-            be later today or Monday), we can provide all of you with a link so
-            that you can listen in on the Court hearing.
+            Bay officials.
           </p>
           <p>
             ⚠At the same time and of significant import, we have scheduled a
