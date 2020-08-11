@@ -1,5 +1,5 @@
 import React from 'react';
-import poster from '../../assets/AllyPoster.jpeg';
+import poster from '../../assets/poster.png';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Grid from '@material-ui/core/Grid';
 

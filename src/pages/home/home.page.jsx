@@ -49,7 +49,7 @@ const HomePage = () => {
       <Grid container className={classes.mainPage}>
         <Grid item xs={12} sm={8} className={classes.bodyLeft}>
           <Switch>
-            <Route exact path="/about" component={HomeArticle} />
+            {/* <Route exact path="/about" component={HomeArticle} /> */}
             <Route exact path="/home" component={AboutArticle} />
           </Switch>
         </Grid>
