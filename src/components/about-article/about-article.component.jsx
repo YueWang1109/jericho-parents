@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Modal from '@material-ui/core/Modal';
 import Map from '../../assets/about.png';
-import stats from '../../assets/stats.jpg';
+import stats from '../../assets/stats.png';
 import Poster from '../poster/poster.component';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
