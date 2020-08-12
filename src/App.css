@@ -4,3 +4,14 @@
   width: 100vw;
   min-height: 100vh;
 }
+.span-underscore {
+  text-decoration: underline;
+}
+
+.span-bold {
+  font-weight: 700;
+}
+
+.span-red {
+  font: red;
+}
