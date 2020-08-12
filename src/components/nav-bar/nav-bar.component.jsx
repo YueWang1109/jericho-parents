@@ -20,10 +20,10 @@ const NavBar = ({ inView }) => {
           HOME
         </NavLink>
         <NavLink to="/about" activeClassName="selected">
-          ABOUT US
+          ABOUT
         </NavLink>
         <NavLink to="/contact" activeClassName="selected">
-          CONTACT
+          CONTACT US
         </NavLink>
       </div>
       <div className="right-side">
