@@ -30,6 +30,7 @@ export default function Checkout({ handleClose }) {
   const [info, setInfo] = React.useState({
     firstName: '',
     lastName: '',
+    email: '',
     address1: '',
     address2: '',
     city: '',
@@ -68,8 +69,8 @@ export default function Checkout({ handleClose }) {
       padding: theme.spacing(3, 0, 5),
     },
     content: {
-      height: 'calc(100% - 200px)',
-      overflow: 'scroll',
+      height: '400px',
+      // overflow: 'scroll',
     },
     buttons: {
       display: 'flex',
@@ -150,7 +151,6 @@ export default function Checkout({ handleClose }) {
             </React.Fragment>
           </React.Fragment>
         </Paper>
-        <Copyright />
       </main>
     </React.Fragment>
   );

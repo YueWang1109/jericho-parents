@@ -1,14 +1,12 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Switch, Route } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import Header from '../../components/header/header.component';
 import HomeArticle from '../../components/home-article/home-article.component';
 import AboutArticle from '../../components/about-article/about-article.component';
 import LinkArea from '../../components/link-area/link-area.component';
 import Copyright from '../../components/copyright/copyright.component';
 
-import './home.styles.css';
+import './home.styles.scss';
 import Poster from '../../components/poster/poster.component';
 
 const useStyles = makeStyles((theme) => ({
@@ -45,13 +43,10 @@ const HomePage = () => {
   const classes = useStyles();
   return (
     <>
-      <Header />
-      <Grid container className={classes.mainPage}>
+      {/* <Header /> */}
+      {/* <Grid container className={classes.mainPage}>
         <Grid item xs={12} sm={8} className={classes.bodyLeft}>
-          <Switch>
-            {/* <Route exact path="/about" component={HomeArticle} /> */}
-            <Route exact path="/home" component={AboutArticle} />
-          </Switch>
+          <HomeArticle />
         </Grid>
         <Grid item xs={12} sm={4}>
           <div className={classes.bodyRight}>
@@ -59,11 +54,10 @@ const HomePage = () => {
           </div>
         </Grid>
         <Grid item xs={12} className={classes.footer}>
-          {/* <div>Follow us on:</div>
-          <div>facebook twitter instagram</div> */}
           <Copyright />
         </Grid>
-      </Grid>
+      </Grid> */}
+      <AboutArticle />
     </>
   );
 };

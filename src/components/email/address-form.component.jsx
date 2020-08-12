@@ -43,6 +43,18 @@ export default function AddressForm({ info, setInfo }) {
         <Grid item xs={12}>
           <TextField
             required
+            id="email"
+            name="email"
+            label="Email"
+            fullWidth
+            autoComplete="email"
+            value={info.email}
+            onChange={handleChange}
+          />
+        </Grid>
+        {/* <Grid item xs={12}>
+          <TextField
+            required
             id="address1"
             name="address1"
             label="Address line 1"
@@ -96,7 +108,7 @@ export default function AddressForm({ info, setInfo }) {
             value={info.zip}
             onChange={handleChange}
           />
-        </Grid>
+        </Grid> */}
         {/* <Grid item xs={12} sm={6}>
           <TextField
             required

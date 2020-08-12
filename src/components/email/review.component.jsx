@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
@@ -7,6 +8,8 @@ const useStyles = makeStyles((theme) => ({
   item: {
     padding: theme.spacing(1, 0),
     textAlign: 'left',
+    wordBreak: 'break-all',
+    color: '#555555',
   },
   title: {
     fontWeight: 700,
@@ -17,9 +20,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Review({ info }) {
   const classes = useStyles();
+  const matches = useMediaQuery('(max-width:800px)');
+  const textLen = matches ? 400 : 800;
   const {
     firstName,
     lastName,
+    email,
     address1,
     address2,
     city,
@@ -67,7 +73,7 @@ export default function Review({ info }) {
           alignContent="flex-start"
           className={classes.title}
         >
-          Address:
+          Email:
         </Grid>
         <Grid
           item
@@ -76,14 +82,16 @@ export default function Review({ info }) {
           alignContent="flex-start"
           className={classes.item}
         >
-          {fullAddr}
+          {email}
         </Grid>
 
         <Grid item xs={12} alignContent="flex-start" className={classes.title}>
           Message:
         </Grid>
         <Grid item xs={12} alignContent="flex-start" className={classes.item}>
-          {content.length > 800 ? content.slice(0, 800) + '...' : content}
+          {content.length > textLen
+            ? content.slice(0, textLen) + '...'
+            : content}
         </Grid>
       </Grid>
     </React.Fragment>

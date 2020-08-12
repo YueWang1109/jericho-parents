@@ -1,29 +1,41 @@
 import React from 'react';
+import Logo from '../../assets/logo.png';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { NavLink } from 'react-router-dom';
-import logo from '../../assets/logo_invert.png';
 
 import './nav-bar.styles.scss';
-
-const NavBar = () => (
-  <nav className="nav-bar">
-    <ul>
-      <li>
-        {/* <img src={logo} alt="Jericho Parents" className="logo" /> */}
-        <div className="logo">
-          <div className="upper-name">Jericho</div>
-          <div className="lower-name">Parents</div>
-        </div>
-      </li>
-      <li>
-        <NavLink exact to="/home">
-          Home
+const NavBar = ({ inView }) => {
+  const matches = useMediaQuery('(max-width:800px)');
+  return (
+    <div
+      className={`${inView ? 'nav-bar' : 'nav-bar reverse'} ${
+        matches ? 'small' : ''
+      }`}
+    >
+      <div>
+        <img className="logo" src={Logo} alt="Jericho Parents" />
+      </div>
+      <div className="left-side">
+        <NavLink to="/home" activeClassName="selected">
+          HOME
         </NavLink>
-      </li>
-      <li>
-        <NavLink to="/about/">About</NavLink>
-      </li>
-    </ul>
-  </nav>
-);
+        <NavLink to="/about" activeClassName="selected">
+          ABOUT US
+        </NavLink>
+        <NavLink to="/contact" activeClassName="selected">
+          CONTACT
+        </NavLink>
+      </div>
+      <div className="right-side">
+        <div>
+          <i class="fab fa-facebook-square"></i>
+        </div>
+        <div>
+          <i class="fab fa-twitter-square"></i>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default NavBar;
