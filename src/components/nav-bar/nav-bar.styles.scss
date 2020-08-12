@@ -26,10 +26,6 @@
     --text: #eeeeee;
     --background: #333333;
   }
-  &.small {
-    font-size: 10px;
-    padding: 0 2px;
-  }
   .left-side {
     display: flex;
     align-items: center;
@@ -45,6 +41,17 @@
     .selected {
       border-bottom: 1px var(--text) solid;
       // font-weight: 900;
+    }
+  }
+  &.small {
+    font-size: 10px;
+    padding: 0 2px;
+
+    .left-side {
+      a {
+        margin: 5px;
+        padding: 5px;
+      }
     }
   }
   .right-side {
