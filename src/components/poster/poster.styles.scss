@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15vw;
+  // padding: 15vw;
   overflow: scroll;
 
   .red {
@@ -30,10 +30,12 @@
   .message-container {
     display: flex;
     width: 500px;
+    height: 100vh;
+    overflow: scroll;
     flex-direction: column;
     background-color: white;
     padding: 50px;
-    margin-top: 100px;
+    // margin-top: 100px;
     align-items: center;
     justify-content: center;
 
