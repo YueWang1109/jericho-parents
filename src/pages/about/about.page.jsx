@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bodyLeft: {
     minHeight: 'calc(100vh - 200px)',
-    padding: 30,
+    // padding: 30,
   },
   bodyRight: {
     // minHeight: 'calc(100vh - 200px)',
@@ -40,7 +40,7 @@ const HomePage = () => {
   return (
     <>
       {/* <Header /> */}
-      {/* <Grid container className={classes.mainPage}>
+      <Grid container className={classes.mainPage}>
         <Grid item xs={12} sm={8} className={classes.bodyLeft}>
           <AboutArticle />
         </Grid>
@@ -49,8 +49,8 @@ const HomePage = () => {
             <LinkArea />
           </div>
         </Grid>
-      </Grid> */}
-      <AboutArticle />
+      </Grid>
+      {/* <AboutArticle /> */}
     </>
   );
 };

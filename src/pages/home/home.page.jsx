@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import HomeArticle from '../../components/home-article/home-article.component';
 import AboutArticle from '../../components/about-article/about-article.component';
 import LinkArea from '../../components/link-area/link-area.component';
+import Survy from '../../components/survy/survy.component';
 import Copyright from '../../components/copyright/copyright.component';
 
 import './home.styles.scss';
@@ -50,7 +51,7 @@ const HomePage = () => {
         </Grid>
         <Grid item xs={12} sm={4}>
           <div className={classes.bodyRight}>
-            <LinkArea />
+            <Survy />
           </div>
         </Grid>
       </Grid>
