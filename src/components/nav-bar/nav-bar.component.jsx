@@ -15,7 +15,7 @@ const NavBar = ({ inView }) => {
         matches ? 'small' : ''
       }`}
     >
-      <div>
+      <div className="logo-container">
         <img className="logo" src={Logo} alt="Jericho Parents" />
       </div>
       <div className="left-side">

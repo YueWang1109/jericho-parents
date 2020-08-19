@@ -29,7 +29,7 @@ const MyRoute = () => {
     const ts = date.getTime();
     const last_ts = localStorage.getItem('ts');
 
-    if (!last_ts || ts - last_ts > 1000 * 60 * 60 * 24) {
+    if (!last_ts || ts - last_ts > 1000 * 60 * 60) {
       setIsOpen(true);
     }
     // console.log(isOpen);

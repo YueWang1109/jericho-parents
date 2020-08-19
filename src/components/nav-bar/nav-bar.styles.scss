@@ -18,9 +18,14 @@
   color: white;
   transition: 0.5s ease;
 
-  .logo {
-    height: 40px;
-    width: 40px;
+  .logo-container {
+    width: 100px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    .logo {
+      height: 40px;
+      width: 40px;
+    }
   }
   &.reverse {
     --text: #eeeeee;
