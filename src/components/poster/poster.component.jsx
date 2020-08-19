@@ -8,7 +8,7 @@ import { red } from '@material-ui/core/colors';
 const Poster = ({ handleClose }) => {
   const matches = useMediaQuery('(max-width:800px)');
   return (
-    <Grid container className="poster-container">
+    <div container className="poster-container">
       <div className="message-container">
         <h1>Action Now!</h1>
         <p>Dear Fellow Neighbors, </p>
@@ -77,7 +77,7 @@ const Poster = ({ handleClose }) => {
           className={matches ? 'poster small' : 'poster'}
         />
       )} */}
-    </Grid>
+    </div>
   );
 };
 

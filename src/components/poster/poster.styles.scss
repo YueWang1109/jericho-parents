@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   // padding: 15vw;
-  overflow: scroll;
 
   .red {
     font-weight: 700;
@@ -29,15 +28,17 @@
   }
   .message-container {
     display: flex;
-    width: 500px;
-    height: 100vh;
-    overflow: scroll;
+    width: 90vw;
+    max-width: 500px;
+    height: 95vh;
     flex-direction: column;
     background-color: white;
     padding: 50px;
     // margin-top: 100px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow: scroll;
 
     p {
       align-self: flex-start;
