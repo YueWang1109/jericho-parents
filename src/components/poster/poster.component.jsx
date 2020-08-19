@@ -60,7 +60,7 @@ const Poster = ({ handleClose }) => {
         <div className="skip" onClick={() => handleClose(true)}>
           Remind me later.
         </div>
-        <div className="skip" onClick={() => handleClose(false)}>
+        <div className="skip end" onClick={() => handleClose(false)}>
           sorry, I can't help.
         </div>
         {/* <button
