@@ -1,5 +1,8 @@
 import React from 'react';
 import Logo from '../../assets/logo.png';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { NavLink } from 'react-router-dom';
 
@@ -22,17 +25,35 @@ const NavBar = ({ inView }) => {
         <NavLink to="/about" activeClassName="selected">
           ABOUT
         </NavLink>
-        <NavLink to="/contact" activeClassName="selected">
+        {/* <NavLink to="/contact" activeClassName="selected">
           CONTACT US
-        </NavLink>
+        </NavLink> */}
       </div>
       <div className="right-side">
-        <div>
-          <i class="fab fa-facebook-square"></i>
-        </div>
-        <div>
-          <i class="fab fa-twitter-square"></i>
-        </div>
+        <a
+          href="https://www.facebook.com/jerichoparents/"
+          title="check our facebook page"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FacebookIcon />
+        </a>
+        <a
+          href="https://www.instagram.com/jerichoparents/"
+          title="check our instagram page"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <InstagramIcon />
+        </a>
+        {/* <a
+          href="https://www.google.com"
+          title="check our twitter feed"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <TwitterIcon />
+        </a> */}
       </div>
     </div>
   );

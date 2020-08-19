@@ -40,16 +40,17 @@ const HomePage = () => {
   return (
     <>
       {/* <Header /> */}
-      <Grid container className={classes.mainPage}>
+      {/* <Grid container className={classes.mainPage}>
         <Grid item xs={12} sm={8} className={classes.bodyLeft}>
-          <HomeArticle />
+          <AboutArticle />
         </Grid>
         <Grid item xs={12} sm={4}>
           <div className={classes.bodyRight}>
             <LinkArea />
           </div>
         </Grid>
-      </Grid>
+      </Grid> */}
+      <AboutArticle />
     </>
   );
 };

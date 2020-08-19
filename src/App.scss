@@ -1,0 +1,46 @@
+.App {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+.span-underscore {
+  text-decoration: underline;
+}
+
+.span-bold {
+  font-weight: 700;
+}
+
+.span-red {
+  font: red;
+}
+
+.small {
+  font-size: 14px;
+
+  .big {
+    font-size: 25px;
+  }
+}
+p {
+  .red {
+    font-weight: 700;
+    color: red;
+  }
+  .mid {
+    font-weight: 700;
+    font-size: 25px;
+    padding: 0 5px;
+  }
+  .big {
+    font-weight: 700;
+    font-size: 35px;
+  }
+  .underscore {
+    text-decoration: underline;
+  }
+  .bold {
+    font-weight: 700;
+  }
+}

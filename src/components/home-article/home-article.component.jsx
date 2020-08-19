@@ -1,86 +1,79 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Modal from '@material-ui/core/Modal';
-import Map from '../../assets/about.png';
-import stats from '../../assets/stats.png';
-import Poster from '../poster/poster.component';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Poster from '../poster/poster.component';
+import Email from '../email/checkout.component';
+import Population from '../../assets/population.png';
+import Homeless from '../../assets/homeless.png';
+import ShelterMap from '../../assets/sheltermap.png';
 
 import './home-article.styles.scss';
-
 const HomeArticle = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // useEffect(() => {
-  //   const date = new Date();
-  //   const ts = date.getTime();
-  //   const last_ts = localStorage.getItem('ts');
-  //   console.log('last_ts', last_ts);
-  //   if (!last_ts || ts - last_ts > 1000 * 60 * 60 * 24) {
-  //     setIsOpen(true);
-  //     localStorage.setItem('ts', ts);
-  //   }
-  //   console.log(isOpen);
-  //   setTimeout(() => setIsOpen(false), 10000);
-  // }, []);
+  const matches = useMediaQuery('(max-width:800px)');
+  const handleClick = () => {
+    setIsOpen(true);
+  };
   const handleClose = () => {
     setIsOpen(false);
   };
-  const matches = useMediaQuery('(max-width:800px)');
-
   return (
     <div className={matches ? 'home-article small' : 'home-article'}>
       <Modal
         open={isOpen}
+        onClose={handleClose}
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
         <div>
-          <Poster handleClose={handleClose} />
+          <Email handleClose={handleClose} />
         </div>
       </Modal>
-      {/* <div className="urgen"> */}
-      {/* <div>
-        <img src={stats} alt="map" className="img f" />
+      {/* <Poster /> */}
+      <h1>Important You Need to Know !</h1>
+      <div className={matches ? 'image-container small' : 'image-container'}>
+        <img src={Population} alt="population" />
+        <img src={Homeless} alt="homeless" />
       </div>
-      <div className="devider" /> */}
-      <img src={Map} alt="map" className="img" />
-      <div>
-        <p>
-          The <span className="big">Hampton Inn</span>, located at 120 Jericho
-          Turnpike, has recently been sold to a private investor with plans to
-          convert it into a homeless shelter. Local residents initially heard
-          about this at the Jericho Board of Education meeting on July 23rd,
-          2020. Renovation of the former hotel has already been undertaken, with
-          the homeless shelter targeting to begin operations in August 2020.
-        </p>
-        <p>
-          This plan has NEVER been communicated to the local community. Since
-          July 23rd, local residents have been reaching out to County elected
-          officials to obtain more facts.
-        </p>
-        <ul>
-          <li>
-            The Town of Oyster Bay was NOT aware of this until July 24th, 2020.
-          </li>
-          <li>
-            Local Nassau County Legislator Arnold Drucker stated that he heard
-            about this plan on July 23rd, 2020.
-          </li>{' '}
-          <li>
-            According to Jericho School District officials, “…Jericho School
-            District has NOT participated in the decision making process for
-            this Facility,” and “Please be advised the Jericho School District
-            was NOT contacted by CHI in January 2020 and as a matter of record
-            we were NEVER contacted by CHI.” Please note that CHI stands for
-            Community Housing Innovations, who manages this Hampton Inn
-            transitional housing project.
-          </li>
-        </ul>
-        <p>
-          It is <span className="red">UNACCEPTABLE</span> that there was no
-          communication and no transparency regarding the conversion of the
-          Hampton Inn into a homeless shelter.
-        </p>
-      </div>
+      <p>
+        According to CHI: “Nassau County currently has 43 residential shelters.
+        27 of those are family shelters, which cannot accommodate many larger
+        families, according to Nancy Nunziata, commissioner of the department.
+        At the moment,{' '}
+        <span className="underscore">
+          117 families reside in those shelters
+        </span>
+        , whose services are largely provided by nonprofit organizations. But
+        <span className="underscore">
+          another 104 families are in motels and without additional housing
+          services around the county.
+        </span>
+        ”
+      </p>
+      <p>
+        Around <span className="red bold">50</span> families currently reside in
+        four motel facilities in Jericho near the former Hampton Inn, if we are
+        having additional 80 families, there will be{' '}
+        <span className="underscore bold">
+          total 130 homeless families live in Jericho.
+        </span>
+      </p>
+      <p>
+        Jericho has total population of 13,567, which is only{' '}
+        <span className="red bold">1%</span> of Nassau County’s Population
+        (1.357 million ) and has already hosted{' '}
+        <span className="bold">23%</span> of Nassau County’s homeless families.
+        It is proposed to take <span className="red bold">60%</span> of Nassau
+        County’s homeless families.
+      </p>
+      <p>
+        The question is if Jericho takes the 80 out of 104 families without
+        additional housing services, where the next 24 go?
+      </p>
+      <img src={ShelterMap} alt="shelter" className="image-shelter" />
+      {/* <div className="contact-btn" onClick={handleClick}>
+        Count Me In!
+      </div> */}
     </div>
   );
 };
