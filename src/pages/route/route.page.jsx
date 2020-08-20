@@ -23,18 +23,18 @@ const MyRoute = () => {
     }
     setIsOpen(false);
   };
-  useEffect(() => {
-    // setIsOpen(true);
-    const date = new Date();
-    const ts = date.getTime();
-    const last_ts = localStorage.getItem('ts');
+  // useEffect(() => {
+  //   // setIsOpen(true);
+  //   const date = new Date();
+  //   const ts = date.getTime();
+  //   const last_ts = localStorage.getItem('ts');
 
-    if (!last_ts || ts - last_ts > 1000 * 60 * 60) {
-      setIsOpen(true);
-    }
-    // console.log(isOpen);
-    // setTimeout(() => setIsOpen(false), 10000);
-  });
+  //   if (!last_ts || ts - last_ts > 1000 * 60 * 60) {
+  //     setIsOpen(true);
+  //   }
+  //   // console.log(isOpen);
+  //   // setTimeout(() => setIsOpen(false), 10000);
+  // });
   return (
     <>
       <Modal

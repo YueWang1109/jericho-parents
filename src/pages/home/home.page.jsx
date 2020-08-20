@@ -45,15 +45,15 @@ const HomePage = () => {
   return (
     <>
       {/* <Header /> */}
-      <Grid container className={classes.mainPage}>
+      <Grid container className={classes.mainPage} justify="center">
         <Grid item xs={12} sm={8} className={classes.bodyLeft}>
           <HomeArticle />
         </Grid>
-        <Grid item xs={12} sm={4}>
+        {/* <Grid item xs={12} sm={4}>
           <div className={classes.bodyRight}>
             <Survy />
           </div>
-        </Grid>
+        </Grid> */}
       </Grid>
       {/* <HomeArticle /> */}
     </>

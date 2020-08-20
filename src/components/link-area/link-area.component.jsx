@@ -67,13 +67,13 @@ const LinkArea = () => (
       <div>
         4.{' '}
         <a
-          href="mailto: 516Jericho@gmail.com
+          href="mailto: support@jerichoparents.com
 
 "
           rel="noopener noreferrer"
           target="_blank"
         >
-          516jericho@gmail.com
+          support@jerichoparents.com
         </a>
         <div className="detail">
           An information inbox was created to collect emails and circulate needs
