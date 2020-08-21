@@ -31,7 +31,7 @@ const ResourcesPage = () => {
   const classes = useStyles();
   return (
     <Grid container className={classes.mainPage} justify="center">
-      <Grid item xs={12} sm={6} className={classes.bodyLeft}>
+      <Grid item xs={11} sm={6} className={classes.bodyLeft}>
         <Resources />
       </Grid>
       {/* <Grid item xs={12} sm={4}>
