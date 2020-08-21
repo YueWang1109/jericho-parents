@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from '../../components/header/header.component';
 import HomePage from '../home/home.page';
 import AboutPage from '../about/about.page';
+import ResourcesPage from '../resources/resources.page';
+import PageNotFound from '../page-not-found/page-not-found.page';
 import Modal from '@material-ui/core/Modal';
 import Checkout from '../../components/email/checkout.component';
 import Copyright from '../../components/copyright/copyright.component';
@@ -56,7 +58,9 @@ const MyRoute = () => {
         <Switch>
           <Route exact path="/home" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/contact" component={RegisterForm} />
+          <Route exact path="/resources" component={ResourcesPage} />
+          {/* <Route exact path="/contact" component={RegisterForm} /> */}
+          <Route component={PageNotFound} />
         </Switch>
       </Route>
       <br />

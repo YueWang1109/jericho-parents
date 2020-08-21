@@ -1,0 +1,21 @@
+.resource-item-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-content: center;
+  padding: 10px 30px;
+  margin: 15px 0;
+  border: #cccccc 1px solid;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eeeeee9a;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+}
