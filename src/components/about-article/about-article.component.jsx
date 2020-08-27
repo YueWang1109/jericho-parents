@@ -1,45 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import Modal from '@material-ui/core/Modal';
 import Map from '../../assets/about.png';
-import Poster from '../poster/poster.component';
+import stats from '../../assets/stats.png';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import './about-article.styles.scss';
 
 const AboutArticle = () => {
-  const [isOpen, setIsOpen] = useState(true);
-  useEffect(() => {
-    const date = new Date();
-    const ts = date.getTime();
-    const last_ts = localStorage.getItem('ts');
-    console.log('last_ts', last_ts);
-    if (!last_ts || ts - last_ts > 1000 * 60 * 60 * 24) {
-      setIsOpen(true);
-      localStorage.setItem('ts', ts);
-    }
-    // console.log(isOpen);
-    // setTimeout(() => setIsOpen(false), 5000);
-  }, []);
   const matches = useMediaQuery('(max-width:800px)');
 
   return (
     <div className={matches ? 'about-article small' : 'about-article'}>
-      <Modal
-        open={isOpen}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-      >
-        <div>
-          <Poster />
-        </div>
-      </Modal>
+      {/* <div className="urgen"> */}
+      {/* <div>
+        <img src={stats} alt="map" className="img f" />
+      </div>
+      <div className="devider" /> */}
       <img src={Map} alt="map" className="img" />
       <div>
         <p>
           The <span className="big">Hampton Inn</span>, located at 120 Jericho
           Turnpike, has recently been sold to a private investor with plans to
           convert it into a homeless shelter. Local residents initially heard
-          about this at the Jericho Broad of Education meeting on July 23rd,
+          about this at the Jericho Board of Education meeting on July 23rd,
           2020. Renovation of the former hotel has already been undertaken, with
           the homeless shelter targeting to begin operations in August 2020.
         </p>

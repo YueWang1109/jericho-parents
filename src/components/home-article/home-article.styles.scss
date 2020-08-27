@@ -1,11 +1,37 @@
 .home-article {
   font-size: 20px;
-  padding: 10px 0;
   font-weight: 100;
   font-family: 'Open Sans Condensed', sans-serif;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 30px;
 
+  h1 {
+    align-self: center;
+  }
+  .image-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 300px;
+      margin: 30px;
+    }
+    &.small {
+      img {
+        height: 200px;
+        margin: 10px;
+      }
+    }
+  }
   &.small {
     font-size: 14px;
+    padding: 0 3vw;
   }
   .contact-btn {
     width: 150px;
@@ -21,5 +47,9 @@
       background-color: red;
       color: white;
     }
+  }
+  .image-shelter {
+    width: 80%;
+    align-self: center;
   }
 }

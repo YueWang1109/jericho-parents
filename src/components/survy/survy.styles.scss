@@ -1,0 +1,38 @@
+.link-area {
+  width: 100%;
+
+  img {
+    width: 150px;
+    padding-bottom: 20px;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
+  .detail {
+    font-size: 13px;
+    font-style: italic;
+    color: #555;
+    padding: 5px 0;
+  }
+  .contact-btn {
+    text-decoration: none;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    color: red;
+    font-weight: 700;
+    border: 3px solid red;
+    border-radius: 30px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: red;
+      color: white;
+    }
+  }
+  p {
+    align-self: flex-start;
+  }
+}

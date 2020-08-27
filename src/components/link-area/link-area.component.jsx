@@ -12,8 +12,8 @@ const LinkArea = () => (
   <Grid container className="link-area">
     <Grid container justify="center" alignItems="center" direction="column">
       <div>
-        1. <span>Petition</span> (“Stop the Housing Site for Homeless Shelter in
-        Jericho”){' '}
+        1. <span>Petition</span> (“Stop the Housing Site for Illegal Homeless
+        Shelter in Jericho”){' '}
         <a
           href="http://chng.it/KGNFGb5YNd"
           rel="noopener noreferrer"
@@ -29,13 +29,15 @@ const LinkArea = () => (
     </Grid>
     <Grid container justify="center" alignItems="center" direction="column">
       <div>
-        2. <span>GoFundMe</span> (“Stop the Homeless Shelter in Jerihco”){' '}
+        2. <span>GoFundMe</span> (“Stop the Illegal Homeless Shelter in
+        Jerihco”){' '}
         <a
-          href="https://gf.me/u/yjzhvw"
+          href="https://www.gofundme.com/f/stop-the-homeless-shelter-in-jericho
+          "
           rel="noopener noreferrer"
           target="_blank"
         >
-          https://gf.me/u/yjzhvw
+          https://www.gofundme.com/f/stop-the-homeless-shelter-in-jericho
         </a>
         <div className="detail">
           More than $75K has been raised within 24 hours. This money will be
@@ -67,20 +69,20 @@ const LinkArea = () => (
       <div>
         4.{' '}
         <a
-          href="mailto: 516Jericho@gmail.com
+          href="mailto: support@jerichoparents.com
 
 "
           rel="noopener noreferrer"
           target="_blank"
         >
-          516jericho@gmail.com
+          support@jerichoparents.com
         </a>
         <div className="detail">
           An information inbox was created to collect emails and circulate needs
           from the community.
         </div>
       </div>
-      <img src={sign} alt="Logo" />
+      <img src={info} alt="Logo" />
     </Grid>
   </Grid>
 );
