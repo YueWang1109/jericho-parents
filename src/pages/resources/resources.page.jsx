@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { Switch, Route } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Resources from '../../components/resources/resources.component';
+import Contacts from '../../components/contacts/contacts.component';
 
 const useStyles = makeStyles((theme) => ({
   mainPage: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bodyLeft: {
     minHeight: 'calc(100vh - 200px)',
-    // padding: 30,
+    margin: 30,
   },
   bodyRight: {
     // minHeight: 'calc(100vh - 200px)',
@@ -31,8 +32,9 @@ const ResourcesPage = () => {
   const classes = useStyles();
   return (
     <Grid container className={classes.mainPage} justify="center">
-      <Grid item xs={11} sm={6} className={classes.bodyLeft}>
+      <Grid item sm={11} md={6} className={classes.bodyLeft}>
         <Resources />
+        <Contacts />
       </Grid>
       {/* <Grid item xs={12} sm={4}>
         <div className={classes.bodyRight}>

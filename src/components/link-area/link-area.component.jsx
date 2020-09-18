@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Grid from '@material-ui/core/Grid';
 import petition from '../../assets/QR_petition.png';
 import sign from '../../assets/QR_freesign.png';
 import info from '../../assets/QR_info.png';
@@ -9,47 +8,49 @@ import donation from '../../assets/QR_donation.png';
 
 import './link-area.styles.scss';
 const LinkArea = () => (
-  <Grid container className="link-area">
-    <Grid container justify="center" alignItems="center" direction="column">
+  <div className="link-area">
+    <h2>Some easy ways to show your support</h2>
+    <div className="link-container">
+      <img src={petition} alt="Logo" />
       <div>
-        1. <span>Petition</span> (“Stop the Housing Site for Illegal Homeless
-        Shelter in Jericho”){' '}
+        1.{' '}
         <a
           href="http://chng.it/KGNFGb5YNd"
           rel="noopener noreferrer"
           target="_blank"
         >
-          http://chng.it/KGNFGb5YNd
-        </a>
+          <span>Petition</span>
+        </a>{' '}
+        (“Stop the Housing Site for Illegal Homeless Shelter in Jericho”){' '}
         <div className="detail">
           Over 1,500 supporters have signed the petition within 22 hours.
         </div>
       </div>
-      <img src={petition} alt="Logo" />
-    </Grid>
-    <Grid container justify="center" alignItems="center" direction="column">
+    </div>
+    <div className="link-container">
+      <img src={donation} alt="Logo" />
       <div>
-        2. <span>GoFundMe</span> (“Stop the Illegal Homeless Shelter in
-        Jerihco”){' '}
+        2.{' '}
         <a
           href="https://www.gofundme.com/f/stop-the-homeless-shelter-in-jericho
           "
           rel="noopener noreferrer"
           target="_blank"
         >
-          https://www.gofundme.com/f/stop-the-homeless-shelter-in-jericho
-        </a>
+          <span>GoFundMe</span>
+        </a>{' '}
+        (“Stop the Illegal Homeless Shelter in Jerihco”){' '}
         <div className="detail">
           More than $75K has been raised within 24 hours. This money will be
           strictly used for all legal services necessary to fight the homeless
           shelter location on behalf of the community.
         </div>
       </div>
-      <img src={donation} alt="Logo" />
-    </Grid>
-    <Grid container justify="center" alignItems="center" direction="column">
+    </div>
+    <div className="link-container">
+      <img src={skype} alt="Logo" />
       <div>
-        3. <span>Jericho Strong on Skype</span>{' '}
+        3.{' '}
         <a
           href="https://join.skype.com/sDK6CLjJg4GW
 
@@ -57,15 +58,15 @@ const LinkArea = () => (
           rel="noopener noreferrer"
           target="_blank"
         >
-          https://join.skype.com/sDK6CLjJg4GW
+          <span>Jericho Strong on Skype</span>
         </a>
         <div className="detail">
           Approximately 130 participants has joined within 48 hours.
         </div>
       </div>
-      <img src={skype} alt="Logo" />
-    </Grid>
-    <Grid container justify="center" alignItems="center" direction="column">
+    </div>
+    <div className="link-container">
+      <img src={info} alt="Logo" />
       <div>
         4.{' '}
         <a
@@ -75,16 +76,15 @@ const LinkArea = () => (
           rel="noopener noreferrer"
           target="_blank"
         >
-          support@jerichoparents.com
+          <span>Contact Us</span>
         </a>
         <div className="detail">
           An information inbox was created to collect emails and circulate needs
           from the community.
         </div>
       </div>
-      <img src={info} alt="Logo" />
-    </Grid>
-  </Grid>
+    </div>
+  </div>
 );
 
 export default LinkArea;

@@ -6,6 +6,7 @@ import Email from '../email/checkout.component';
 import Population from '../../assets/population.png';
 import Homeless from '../../assets/homeless.png';
 import ShelterMap from '../../assets/sheltermap.png';
+import Logo from '../../assets/logo.png';
 
 import './home-article.styles.scss';
 const HomeArticle = () => {
@@ -30,6 +31,18 @@ const HomeArticle = () => {
         </div>
       </Modal>
       {/* <Poster /> */}
+      <div className={matches ? 'mission small' : 'mission'}>
+        <div className="left">
+          <h1>OUR MISSION</h1>
+          <p>
+            Our mission is to stop an illegal shelter that was done in secrecy
+            and lack of transparency, that the citizens and taxpayers deserve to
+            have. We object to any plans put by the government without any
+            community input or hearings. ​
+          </p>
+        </div>
+        <img src={Logo} alt="Concerned Jericho Parents" />
+      </div>
       <h1>Important You Need to Know !</h1>
       <div className={matches ? 'image-container small' : 'image-container'}>
         <img src={Population} alt="population" />

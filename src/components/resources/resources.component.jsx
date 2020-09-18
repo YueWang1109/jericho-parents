@@ -21,9 +21,9 @@ const Resources = () => {
     const snapshot = await db.collection('resourceList').get();
     const list = snapshot.docs.map((doc) => doc.data());
     const finalList = await Promise.all(
-      list.map(async ({ fileName, title, index }) => {
+      list.map(async ({ fileName, title, index, type }) => {
         const url = await docRef.child(fileName).getDownloadURL();
-        return { title, url, index };
+        return { title, url, index, type };
       }),
     );
     setFileList(finalList);
@@ -35,8 +35,8 @@ const Resources = () => {
         .sort((a, b) => {
           return a.index - b.index;
         })
-        .map(({ title, url }) => (
-          <ResourceItem key={title} title={title} url={url} />
+        .map(({ title, url, type }) => (
+          <ResourceItem key={title} title={title} url={url} type={type} />
         ))}
     </div>
   );

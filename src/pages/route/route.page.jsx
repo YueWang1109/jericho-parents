@@ -56,7 +56,7 @@ const MyRoute = () => {
         }}
       >
         <Switch>
-          <Route exact path="/home" component={HomePage} />
+          <Route exact path={['/', '/home']} component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/resources" component={ResourcesPage} />
           {/* <Route exact path="/contact" component={RegisterForm} /> */}
