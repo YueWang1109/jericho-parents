@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
   },
   bodyRight: {
     // minHeight: 'calc(100vh - 200px)',
-    margin: 30,
     padding: 30,
     // marginRight: 30,
     backgroundColor: '#eeeeee75',
@@ -45,9 +44,7 @@ const HomePage = () => {
           <HomeArticle />
         </Grid>
         <Grid item sm={12} md={4}>
-          <div className={classes.bodyRight}>
-            <LinkArea />
-          </div>
+          <LinkArea />
         </Grid>
       </Grid>
     </>

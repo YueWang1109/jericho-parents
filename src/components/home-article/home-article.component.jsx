@@ -1,50 +1,16 @@
-import React, { useState } from 'react';
-import Modal from '@material-ui/core/Modal';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import Poster from '../poster/poster.component';
-import Email from '../email/checkout.component';
+import React from 'react';
 import Population from '../../assets/population.png';
 import Homeless from '../../assets/homeless.png';
 import ShelterMap from '../../assets/sheltermap.png';
-import Logo from '../../assets/logo.png';
+import Mission from '../mission/mission.component';
 
 import './home-article.styles.scss';
 const HomeArticle = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const matches = useMediaQuery('(max-width:800px)');
-  const handleClick = () => {
-    setIsOpen(true);
-  };
-  const handleClose = () => {
-    setIsOpen(false);
-  };
   return (
-    <div className={matches ? 'home-article small' : 'home-article'}>
-      <Modal
-        open={isOpen}
-        onClose={handleClose}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-      >
-        <div>
-          <Email handleClose={handleClose} />
-        </div>
-      </Modal>
-      {/* <Poster /> */}
-      <div className={matches ? 'mission small' : 'mission'}>
-        <div className="left">
-          <h1>OUR MISSION</h1>
-          <p>
-            Our mission is to stop an illegal shelter that was done in secrecy
-            and lack of transparency, that the citizens and taxpayers deserve to
-            have. We object to any plans put by the government without any
-            community input or hearings. ​
-          </p>
-        </div>
-        <img src={Logo} alt="Concerned Jericho Parents" />
-      </div>
+    <div className="home-article">
+      <Mission />
       <h1>Important You Need to Know !</h1>
-      <div className={matches ? 'image-container small' : 'image-container'}>
+      <div className="image-container">
         <img src={Population} alt="population" />
         <img src={Homeless} alt="homeless" />
       </div>
@@ -84,9 +50,6 @@ const HomeArticle = () => {
         additional housing services, where the next 24 go?
       </p>
       <img src={ShelterMap} alt="shelter" className="image-shelter" />
-      {/* <div className="contact-btn" onClick={handleClick}>
-        Count Me In!
-      </div> */}
     </div>
   );
 };

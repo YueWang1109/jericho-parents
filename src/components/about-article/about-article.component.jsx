@@ -1,21 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Modal from '@material-ui/core/Modal';
+import React from 'react';
 import Map from '../../assets/about.png';
-import stats from '../../assets/stats.png';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import './about-article.styles.scss';
 
 const AboutArticle = () => {
-  const matches = useMediaQuery('(max-width:800px)');
-
   return (
-    <div className={matches ? 'about-article small' : 'about-article'}>
-      {/* <div className="urgen"> */}
-      {/* <div>
-        <img src={stats} alt="map" className="img f" />
-      </div>
-      <div className="devider" /> */}
+    <div className="about-article">
       <h1>Jericho Homeless Housing Plan Fact Sheet</h1>
       <img src={Map} alt="map" className="img" />
       <ul>

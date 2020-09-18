@@ -2,22 +2,15 @@ import React from 'react';
 import Logo from '../../assets/logo.png';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { NavLink } from 'react-router-dom';
 
 import './nav-bar.styles.scss';
 const NavBar = ({ inView }) => {
-  const matches = useMediaQuery('(max-width:800px)');
   const toTop = () => {
     window.scrollTo(0, 0);
   };
   return (
-    <div
-      className={`${inView ? 'nav-bar' : 'nav-bar reverse'} ${
-        matches ? 'small' : ''
-      }`}
-    >
+    <div className={`${inView ? 'nav-bar' : 'nav-bar reverse'}`}>
       <div className="logo-container">
         <img className="logo" src={Logo} alt="Jericho Parents" />
       </div>
