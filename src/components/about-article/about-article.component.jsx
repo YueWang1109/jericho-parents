@@ -1,5 +1,7 @@
 import React from 'react';
 import Map from '../../assets/about.png';
+import Flyer1 from '../../assets/flyer1.jpeg';
+import Flyer2 from '../../assets/flyer2.jpeg';
 
 import './about-article.styles.scss';
 
@@ -40,6 +42,10 @@ const AboutArticle = () => {
           preventing the property from being used for transitional housing. This
           order was later upheld as the Court denied developer’s appeal.!
         </li>
+        <div className="flyer">
+          <img src={Flyer1} alt="flyer1" />
+          <img src={Flyer2} alt="flyer1" />
+        </div>
         <li>
           On August 21st,{' '}
           <span className="bold">“Concerned Jericho Parents”</span> filed an
