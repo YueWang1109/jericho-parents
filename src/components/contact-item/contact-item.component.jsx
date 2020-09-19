@@ -17,7 +17,9 @@ const ContactItem = ({ info: { name, email, phone } }) => (
         rel="noopener noreferrer"
         target="_blank"
       >
-        <span>{email}</span>
+        <span>
+          {email.length > 40 ? email.substring(0, 39) + '...' : email}
+        </span>
       </a>
     </div>
     <div className="contact">
