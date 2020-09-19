@@ -17,12 +17,12 @@ const HomeArticle = () => {
       <p>
         According to CHI: “Nassau County currently has 43 residential shelters.
         27 of those are family shelters, which cannot accommodate many larger
-        families, according to Nancy Nunziata, commissioner of the department.
-        At the moment,{' '}
+        families, according to Nancy Nunziata, commissioner of the Nassau County
+        department of social service. At the moment,{' '}
         <span className="underscore">
-          117 families reside in those shelters
+          250 families reside in those shelters
         </span>
-        , whose services are largely provided by nonprofit organizations. But
+        , whose services are largely provided by nonprofit organizations. But{' '}
         <span className="underscore">
           another 104 families are in motels and without additional housing
           services around the county.
@@ -41,8 +41,8 @@ const HomeArticle = () => {
         Jericho has total population of 13,567, which is only{' '}
         <span className="red bold">1%</span> of Nassau County’s Population
         (1.357 million ) and has already hosted{' '}
-        <span className="bold">23%</span> of Nassau County’s homeless families.
-        It is proposed to take <span className="red bold">60%</span> of Nassau
+        <span className="bold">20%</span> of Nassau County’s homeless families.
+        It is proposed to take <span className="red bold">52%</span> of Nassau
         County’s homeless families.
       </p>
       <p>
