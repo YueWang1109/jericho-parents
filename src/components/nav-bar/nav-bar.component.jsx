@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../assets/logo.jpg';
+import Logo from '../../assets/logo.png';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { NavLink } from 'react-router-dom';
