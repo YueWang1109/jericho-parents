@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 import Header from '../../components/header/header.component';
 import HomePage from '../home/home.page';
 import AboutPage from '../about/about.page';
@@ -56,6 +61,7 @@ const MyRoute = () => {
         }}
       >
         <Switch>
+          <Route exact path="/" render={() => <Redirect to="/home" />} />
           <Route exact path="/home" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/resources" component={ResourcesPage} />

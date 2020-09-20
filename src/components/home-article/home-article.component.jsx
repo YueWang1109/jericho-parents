@@ -1,49 +1,28 @@
-import React, { useState } from 'react';
-import Modal from '@material-ui/core/Modal';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import Poster from '../poster/poster.component';
-import Email from '../email/checkout.component';
+import React from 'react';
 import Population from '../../assets/population.png';
 import Homeless from '../../assets/homeless.png';
 import ShelterMap from '../../assets/sheltermap.png';
+import Mission from '../mission/mission.component';
 
 import './home-article.styles.scss';
 const HomeArticle = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const matches = useMediaQuery('(max-width:800px)');
-  const handleClick = () => {
-    setIsOpen(true);
-  };
-  const handleClose = () => {
-    setIsOpen(false);
-  };
   return (
-    <div className={matches ? 'home-article small' : 'home-article'}>
-      <Modal
-        open={isOpen}
-        onClose={handleClose}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-      >
-        <div>
-          <Email handleClose={handleClose} />
-        </div>
-      </Modal>
-      {/* <Poster /> */}
+    <div className="home-article">
+      <Mission />
       <h1>Important You Need to Know !</h1>
-      <div className={matches ? 'image-container small' : 'image-container'}>
+      <div className="image-container">
         <img src={Population} alt="population" />
         <img src={Homeless} alt="homeless" />
       </div>
       <p>
         According to CHI: “Nassau County currently has 43 residential shelters.
         27 of those are family shelters, which cannot accommodate many larger
-        families, according to Nancy Nunziata, commissioner of the department.
-        At the moment,{' '}
+        families, according to Nancy Nunziata, commissioner of the Nassau County
+        department of social service. At the moment,{' '}
         <span className="underscore">
-          117 families reside in those shelters
+          250 families reside in those shelters
         </span>
-        , whose services are largely provided by nonprofit organizations. But
+        , whose services are largely provided by nonprofit organizations. But{' '}
         <span className="underscore">
           another 104 families are in motels and without additional housing
           services around the county.
@@ -62,8 +41,8 @@ const HomeArticle = () => {
         Jericho has total population of 13,567, which is only{' '}
         <span className="red bold">1%</span> of Nassau County’s Population
         (1.357 million ) and has already hosted{' '}
-        <span className="bold">23%</span> of Nassau County’s homeless families.
-        It is proposed to take <span className="red bold">60%</span> of Nassau
+        <span className="bold">20%</span> of Nassau County’s homeless families.
+        It is proposed to take <span className="red bold">52%</span> of Nassau
         County’s homeless families.
       </p>
       <p>
@@ -71,9 +50,6 @@ const HomeArticle = () => {
         additional housing services, where the next 24 go?
       </p>
       <img src={ShelterMap} alt="shelter" className="image-shelter" />
-      {/* <div className="contact-btn" onClick={handleClick}>
-        Count Me In!
-      </div> */}
     </div>
   );
 };

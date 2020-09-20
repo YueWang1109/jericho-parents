@@ -15,6 +15,8 @@ const useStyles = makeStyles((theme) => ({
   mainPage: {
     minHeight: '100vh',
     width: '100vw',
+    display: 'flex',
+    justifyContent: 'center',
   },
   header: {
     height: 130,
@@ -41,13 +43,8 @@ const HomePage = () => {
     <>
       {/* <Header /> */}
       <Grid container className={classes.mainPage}>
-        <Grid item xs={12} sm={8} className={classes.bodyLeft}>
+        <Grid item sm={12} md={8} className={classes.bodyLeft}>
           <AboutArticle />
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <div className={classes.bodyRight}>
-            <LinkArea />
-          </div>
         </Grid>
       </Grid>
       {/* <AboutArticle /> */}

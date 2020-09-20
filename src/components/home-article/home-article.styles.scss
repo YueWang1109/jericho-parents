@@ -7,11 +7,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 30px;
+  padding: 0 30px 30px 30px;
 
-  h1 {
-    align-self: center;
-  }
   .image-container {
     width: 100%;
     display: flex;
@@ -19,33 +16,28 @@
     justify-content: center;
 
     img {
-      height: 300px;
-      margin: 30px;
-    }
-    &.small {
-      img {
-        height: 200px;
-        margin: 10px;
-      }
+      width: 35%;
+      margin: 20px;
     }
   }
-  &.small {
-    font-size: 14px;
-    padding: 0 3vw;
+  .image-shelter {
+    width: 80%;
+    align-self: center;
   }
-  .contact-btn {
-    width: 150px;
-    padding: 10px;
-    text-align: center;
-    color: red;
-    font-weight: 700;
-    border: 3px solid red;
-    border-radius: 30px;
-    cursor: pointer;
 
-    &:hover {
-      background-color: red;
-      color: white;
+  h1 {
+    align-self: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .home-article {
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 14px;
+      // padding: 0 3vw;
     }
   }
   .image-shelter {

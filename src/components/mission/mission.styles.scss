@@ -1,0 +1,67 @@
+.mission {
+  align-self: center;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin: 30px 0;
+  padding: 20px 0;
+  max-width: 800px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 10px 6px -6px #777;
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+
+  .mission-content {
+    margin: 0 40px;
+    h1 {
+      font-size: 50px;
+      color: rgba(0, 0, 0, 0.8);
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  img {
+    width: 300px;
+    margin-right: 30px;
+  }
+
+  .mission {
+    flex-direction: column;
+
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 16px;
+    }
+    img {
+      width: 100px;
+      margin-right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .mission {
+    flex-direction: column;
+    align-items: center;
+    .mission-content {
+      h1 {
+        font-size: 30px;
+        text-align: center;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    img {
+      width: 150px;
+      margin-right: 0;
+    }
+  }
+}

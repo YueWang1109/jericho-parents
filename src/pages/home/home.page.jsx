@@ -2,13 +2,9 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import HomeArticle from '../../components/home-article/home-article.component';
-import AboutArticle from '../../components/about-article/about-article.component';
 import LinkArea from '../../components/link-area/link-area.component';
-import Survy from '../../components/survy/survy.component';
-import Copyright from '../../components/copyright/copyright.component';
 
 import './home.styles.scss';
-import Poster from '../../components/poster/poster.component';
 
 const useStyles = makeStyles((theme) => ({
   mainPage: {
@@ -25,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
   },
   bodyRight: {
     // minHeight: 'calc(100vh - 200px)',
-    margin: 30,
     padding: 30,
     // marginRight: 30,
     backgroundColor: '#eeeeee75',
@@ -44,16 +39,13 @@ const HomePage = () => {
   const classes = useStyles();
   return (
     <>
-      {/* <Header /> */}
       <Grid container className={classes.mainPage} justify="center">
-        <Grid item xs={12} sm={8} className={classes.bodyLeft}>
+        <Grid item sm={12} md={8} className={classes.bodyLeft}>
           <HomeArticle />
         </Grid>
-        {/* <Grid item xs={12} sm={4}>
-          <div className={classes.bodyRight}>
-            <Survy />
-          </div>
-        </Grid> */}
+        <Grid item sm={12} md={4}>
+          <LinkArea />
+        </Grid>
       </Grid>
       {/* <HomeArticle /> */}
     </>
