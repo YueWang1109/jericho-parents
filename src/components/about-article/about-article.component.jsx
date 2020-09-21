@@ -1,5 +1,5 @@
 import React from 'react';
-import Map from '../../assets/about.png';
+import Maps from '../../assets/about.png';
 import Flyer1 from '../../assets/flyer1.jpeg';
 import Flyer2 from '../../assets/flyer2.jpeg';
 
@@ -44,7 +44,7 @@ const AboutArticle = () => {
         </li>
         <div className="flyer">
           <img src={Flyer1} alt="flyer1" />
-          <img src={Flyer2} alt="flyer1" />
+          <img src={Flyer2} alt="flyer2" />
         </div>
         <li>
           On August 21st,{' '}
