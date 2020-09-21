@@ -8,10 +8,10 @@ const Mission = () => (
     <div className="mission-content">
       <h1>OUR MISSION</h1>
       <p>
-        Our mission is to stop an illegal shelter that was done in secrecy and
-        lack of transparency, that the citizens and taxpayers deserve to have.
-        We object to any plans put by the government without any community input
-        or hearings. ​
+        We want to STOP an illegal shelter from being placed in Nassau County
+        that would supersede all local zoning laws. This Shelter was agreed to
+        in secrecy and with a complete lack of transparency, without the
+        appropriate impact studies and public input and hearings.
       </p>
     </div>
     <img src={Logo} alt="Concerned Jericho Parents" />

@@ -9,7 +9,7 @@ const HomeArticle = () => {
   return (
     <div className="home-article">
       <Mission />
-      <h1>Important You Need to Know !</h1>
+      <h1>Important Information You Need to Know !</h1>
       <div className="image-container">
         <img src={Population} alt="population" />
         <img src={Homeless} alt="homeless" />

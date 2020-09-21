@@ -17,7 +17,7 @@ const AboutArticle = () => {
           Curran to convert the existing{' '}
           <span className="bold big">Hampton Inn</span> into a transitional
           homeless housing facility. The plan never went through the
-          legislature.!
+          legislature!
         </li>
         <li>
           Renovations began <span className="bold">without</span> the necessary
@@ -29,7 +29,7 @@ const AboutArticle = () => {
           law, The <span className="bold">Town of Oyster Bay</span> issued a
           Stop Work Order to the developer (120 WestEnd LLC) on August 3rd. The
           developer ignored the Stop Work Order and continued to make
-          renovations to the hotel.!
+          renovations to the hotel!
         </li>
         <li>
           Three days later, on August 6th, with the developer continuing to
@@ -40,7 +40,7 @@ const AboutArticle = () => {
           Judge Arthur Diamond granted the Town’s request and issued a TRO
           against the developer, 120 WestEnd LLC, halting construction and
           preventing the property from being used for transitional housing. This
-          order was later upheld as the Court denied developer’s appeal.!
+          order was later upheld as the Court denied developer’s appeal!
         </li>
         <div className="flyer">
           <img src={Flyer1} alt="flyer1" />
@@ -51,9 +51,7 @@ const AboutArticle = () => {
           <span className="bold">“Concerned Jericho Parents”</span> filed an
           Order to Show Cause with the Court requesting that Judge Diamond
           permit the approximate 500 Jericho residents serving as plaintiffs to
-          intervene in the case brought by the Town against the developer. If
-          granted, this would give the Jericho community “a seat at the table”
-          during all legal proceedings.!
+          intervene in the case brought by the Town against the developer.
         </li>
         <li>
           Legislator Rosie Marie Walker, Chair of the Health and Human Services
