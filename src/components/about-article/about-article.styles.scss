@@ -15,19 +15,8 @@
     justify-content: space-around;
     align-items: center;
 
-    .flyer1 {
-      background-image: url('../../assets/family5.jpeg');
-    }
-    .flyer2 {
-      background-image: url('../../assets/flyer2.jpeg');
-    }
-    .flyer1,
-    .flyer2 {
+    img {
       width: 45%;
-      height: 500px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
     }
   }
   h1 {
@@ -70,8 +59,7 @@
     .flyer {
       padding: 10px 0;
       flex-direction: column;
-      .flyer1,
-      .flyer2 {
+      img {
         width: 90%;
       }
     }

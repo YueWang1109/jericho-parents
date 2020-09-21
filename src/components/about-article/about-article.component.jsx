@@ -1,7 +1,7 @@
 import React from 'react';
 import Map from '../../assets/about.png';
-// import Flyer1 from '../../assets/flyer1.jpeg';
-// import Flyer2 from '../../assets/flyer2.jpeg';
+import Poster1 from '../../assets/poster1.jpeg';
+import Poster2 from '../../assets/poster2.jpeg';
 
 import './about-article.styles.scss';
 
@@ -43,8 +43,8 @@ const AboutArticle = () => {
           order was later upheld as the Court denied developer’s appeal!
         </li>
         <div className="flyer">
-          <div className="flyer1" />
-          <div className="flyer2" />
+          <img src={Poster1} alt="flyer1" />
+          <img src={Poster2} alt="flyer2" />
         </div>
         <li>
           On August 21st,{' '}
