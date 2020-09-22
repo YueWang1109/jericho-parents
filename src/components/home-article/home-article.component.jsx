@@ -11,6 +11,15 @@ const HomeArticle = () => {
   return (
     <div className="home-article">
       <Mission />
+      <iframe
+        title="pr"
+        src="https://player.vimeo.com/video/460724801"
+        width="100%"
+        height={matches ? '400' : '564'}
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+      ></iframe>
       <img src={Stop} alt="shelter" className="image-shelter" />
       <iframe
         title="rally"
