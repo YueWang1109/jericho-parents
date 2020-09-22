@@ -11,16 +11,16 @@ const ResourceItem = ({ title, url, type }) => {
     window.open(url, '_blank');
   };
   return (
-    <>
-      <Tooltip title="download">
-        <div className="resource-item-container" onClick={handleClick}>
-          {type === 1 && <MailOutlineIcon color="primary" />}
-          {type === 2 && <DescriptionIcon color="primary" />}
-          <div>{title}</div>
-          <CloudDownloadIcon style={{ marginLeft: 'auto' }} color="primary" />
-        </div>
-      </Tooltip>
-    </>
+    <div
+      className="resource-item-container"
+      onClick={handleClick}
+      title="download"
+    >
+      {type === 1 && <MailOutlineIcon color="primary" />}
+      {type === 2 && <DescriptionIcon color="primary" />}
+      <div>{title}</div>
+      <CloudDownloadIcon style={{ marginLeft: 'auto' }} color="primary" />
+    </div>
   );
 };
 
