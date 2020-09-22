@@ -2,6 +2,11 @@ import React from 'react';
 import Map from '../../assets/about.png';
 import Poster1 from '../../assets/poster1.jpeg';
 import Poster2 from '../../assets/poster2.jpeg';
+import Where1 from '../../assets/where1.png';
+import Where2 from '../../assets/where2.png';
+import Where3 from '../../assets/where3.png';
+import Population from '../../assets/population.png';
+import Homeless from '../../assets/homeless.png';
 
 import './about-article.styles.scss';
 
@@ -69,6 +74,11 @@ const AboutArticle = () => {
             Jericho will house about 60% of Nassau County’s Homeless Families.
           </span>{' '}
         </li>
+
+        <div className="image-container">
+          <img src={Population} alt="population" />
+          <img src={Homeless} alt="homeless" />
+        </div>
         <li>
           Joel Shafran (120 Westend LLC) purchased the Hampton Inn for $13.5
           million. Community Housing Innovations (CHI), the managing agent, will
@@ -77,10 +87,15 @@ const AboutArticle = () => {
           million to Joel Shafran and leave CHI with $3 million to operate the
           facility.{' '}
           <span className="bold">
-            In 10 years, Shafran stands to make $35 million from this
+            In 10 years, Shafran stands to make $25 million from this
             investment.
           </span>{' '}
         </li>
+        <div className="fact">
+          <img src={Where1} alt="where1" />
+          <img src={Where2} alt="where2" />
+          <img src={Where3} alt="where2" />
+        </div>
         <li>
           The county will spend approximately{' '}
           <span className="bold">$81,340 annually per family</span> to provide

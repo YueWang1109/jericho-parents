@@ -18,7 +18,10 @@ const Resources = () => {
   const docRef = storageRef.child('docs');
 
   const getMarker = async () => {
-    const snapshot = await db.collection('resourceList').get();
+    const snapshot = await db
+      .collection('resourceList')
+      .where('type', '<', 2)
+      .get();
     const list = snapshot.docs.map((doc) => doc.data());
     const finalList = await Promise.all(
       list.map(async ({ fileName, title, index, type }) => {
@@ -31,6 +34,11 @@ const Resources = () => {
   return (
     <div className="resources-contaner">
       <h1>Related Resources</h1>
+      <p>
+        Please help us spreading words and also send our concerns to the elected
+        officials below. Please feel free to use our following sample
+        letters/emails. Thanks for your support!
+      </p>
       {fileList
         .sort((a, b) => {
           return a.index - b.index;
