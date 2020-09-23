@@ -5,6 +5,7 @@ import Poster2 from '../../assets/poster2.jpeg';
 import Where1 from '../../assets/where1.png';
 import Where2 from '../../assets/where2.png';
 import Where3 from '../../assets/where3.png';
+import Conclusion from '../../assets/conclusion.png';
 import Population from '../../assets/population.png';
 import Homeless from '../../assets/homeless.png';
 
@@ -103,6 +104,18 @@ const AboutArticle = () => {
           <span className="bold">temporary</span> housing, a 400 square foot
           room and 3 meals.{' '}
         </li>
+        <li>
+          On September 22nd, Judge Arthur Diamond of the Supreme Court, Nassau
+          County granted the Town of Oyster Bay’s Motion for a Preliminary
+          Injunction, finding that the developer’s position – that State law
+          pre-empted local Town laws – was both flawed and incorrect. By virtue
+          of the Judge’s decision, the Order restraining the developer from
+          engaging in any construction on the property remains in effect while
+          the case – which seeks a Permanent Injunction
+        </li>
+        <div className="fact">
+          <img src={Conclusion} alt="conclusion" />
+        </div>
       </ul>
     </div>
   );
