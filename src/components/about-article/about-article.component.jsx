@@ -105,7 +105,7 @@ const AboutArticle = () => {
           room and 3 meals.{' '}
         </li>
         <li>
-          On September 22nd, Judge Arthur Diamond of the Supreme Court, Nassau
+          On September 21st, Judge Arthur Diamond of the Supreme Court, Nassau
           County granted the Town of Oyster Bay’s Motion for a Preliminary
           Injunction, finding that the developer’s position – that State law
           pre-empted local Town laws – was both flawed and incorrect. By virtue
