@@ -4,6 +4,7 @@ import Fact1 from '../../assets/fact1.png';
 import Fact2 from '../../assets/fact2.png';
 import Mission from '../mission/mission.component';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import FictionFact from '../fiction-fact/fiction-fact.component';
 
 import './home-article.styles.scss';
 const HomeArticle = () => {
@@ -32,8 +33,7 @@ const HomeArticle = () => {
         allowfullscreen
       ></iframe>
       <br />
-      <img src={Fact1} alt="fact1" className="image-shelter" />
-      <img src={Fact2} alt="fact2" className="image-shelter" />
+      <FictionFact />
     </div>
   );
 };

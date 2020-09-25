@@ -1,0 +1,23 @@
+.fiction-fact {
+  width: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  h1 {
+    text-align: center;
+  }
+  .fiction-fact-container {
+    border: #bbb 1px solid;
+    margin: 10px;
+    .fiction {
+      padding: 10px;
+      font-style: italic;
+      background: rgb(236, 31, 0);
+      color: white;
+    }
+    .fact {
+      padding: 10px;
+      // background: rgb(222, 222, 255);
+      // color: rgb(0, 50, 168);
+    }
+  }
+}
