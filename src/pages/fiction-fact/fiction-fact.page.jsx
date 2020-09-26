@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import AboutArticle from '../../components/about-article/about-article.component';
+import FictionFact from '../../components/fiction-fact/fiction-fact.component';
 
 const useStyles = makeStyles((theme) => ({
   mainPage: {
@@ -15,17 +15,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AboutPage = () => {
+const FictionFactPage = () => {
   const classes = useStyles();
   return (
     <>
+      {/* <Header /> */}
       <Grid container className={classes.mainPage}>
         <Grid item sm={12} md={8} className={classes.body}>
-          <AboutArticle />
+          <FictionFact />
         </Grid>
       </Grid>
     </>
   );
 };
 
-export default AboutPage;
+export default FictionFactPage;

@@ -17,6 +17,7 @@ import RegisterForm from '../../components/register-form/register-form.component
 import Poster from '../../components/poster/poster.component';
 // import Copyright from './components/copyright/copyright.component';
 import '../../App.scss';
+import FictionFactPage from '../fiction-fact/fiction-fact.page';
 
 const MyRoute = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,6 +65,7 @@ const MyRoute = () => {
           <Route exact path="/" render={() => <Redirect to="/home" />} />
           <Route exact path="/home" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/fact" component={FictionFactPage} />
           <Route exact path="/resources" component={ResourcesPage} />
           {/* <Route exact path="/contact" component={RegisterForm} /> */}
           <Route component={PageNotFound} />

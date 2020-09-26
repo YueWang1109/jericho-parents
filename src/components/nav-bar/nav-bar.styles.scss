@@ -13,6 +13,7 @@
   color: var(--text);
   padding: 0 20px;
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: space-between;
   color: white;
@@ -28,6 +29,11 @@
       width: 30px;
     }
   }
+  .hamburger {
+    align-self: flex-start;
+    padding: 10px;
+    display: none;
+  }
   &.reverse {
     --text: #eeeeee;
     --background: #333333;
@@ -42,6 +48,7 @@
       margin: 10px;
       padding: 10px;
       transition: 0.5 ease-in-out;
+      border-bottom: 1px transparent solid;
     }
     a:hover,
     .selected {
@@ -91,12 +98,29 @@
   .nav-bar {
     font-size: 10px;
     padding: 0 2px;
+    align-items: flex-start;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    font-size: 16px;
 
+    &.active {
+      height: 300px;
+    }
+    .logo-container {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
     .left-side {
-      a {
-        margin: 5px;
-        padding: 5px;
-      }
+      width: 100vw;
+      padding-top: 50px;
+      flex-direction: column;
+    }
+
+    .right-side {
+      // padding-top: 30px;
+      margin-top: 5px;
     }
   }
 }
