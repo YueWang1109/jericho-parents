@@ -69,7 +69,7 @@ const AboutArticle = () => {
         </li>
         <li>
           Jericho currently makes up 1% of Nassau County’s total population and
-          already houses 23% of Nassau County’s Homeless Population.{' '}
+          already houses 23% of Nassau County’s Homeless Families.{' '}
           <span className="bold">
             With the addition of the proposed shelter at the former Hampton Inn,
             Jericho will house about 60% of Nassau County’s Homeless Families.
