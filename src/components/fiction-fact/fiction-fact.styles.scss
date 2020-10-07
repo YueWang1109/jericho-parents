@@ -4,19 +4,33 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   // text-align: justify;
 
-  h1 {
+  h1,
+  h3 {
     text-align: center;
   }
   .fiction-fact-container {
     border: #bbb 1px solid;
     margin: 10px;
+    .rumor {
+      padding: 10px;
+      background-color: rgb(161, 161, 161);
+      color: white;
+    }
+    .laura-truth {
+      padding: 10px;
+      font-style: italic;
+      color: rgba(255, 0, 0, 0.8);
+      font-size: 14px;
+    }
+
     .fiction {
       padding: 10px;
       font-style: italic;
       background: rgb(236, 31, 0);
       color: white;
     }
-    .fact {
+    .fact,
+    .truth {
       padding: 10px;
       // background: rgb(222, 222, 255);
       // color: rgb(0, 50, 168);
