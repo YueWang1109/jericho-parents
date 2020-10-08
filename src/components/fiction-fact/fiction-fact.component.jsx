@@ -147,8 +147,8 @@ const lauraData = [
 const FictionFact = () => (
   <div className="fiction-fact">
     <h1>
-      Laura Curren's Truth <i style={{ fontSize: '24px' }}>vs.</i> The Real
-      Truth
+      Part1: Laura Curren's Truth <i style={{ fontSize: '24px' }}>vs.</i> The
+      Real Truth
     </h1>
     <h3>
       Updated Facts re: Laura Curran’s newest Rumor vs Facts （updated October
@@ -159,15 +159,17 @@ const FictionFact = () => (
         <div className="rumor">
           <b>Fear/Rumor:</b> {item.rumor}
         </div>
-        <div className="laura-truth">
-          <b>Laura Curran's Truth:</b> {item.lauraFact}
-        </div>
-        <div className="truth">
-          <b>The Real Truth:</b> {item.fact}
+        <div className="truth-container">
+          <div className="laura-truth">
+            <b>Laura Curran's Truth:</b> {item.lauraFact}
+          </div>
+          <div className="truth">
+            <b>The Real Truth:</b> {item.fact}
+          </div>
         </div>
       </div>
     ))}
-    <h1>Fiction vs Fact</h1>
+    <h1>Part2: Fiction vs Fact</h1>
     {factData.map((item) => (
       <div className="fiction-fact-container">
         <div className="fiction">
